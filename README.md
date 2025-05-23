@@ -1,6 +1,6 @@
 # 💰 FinTrack - Personal Expense Tracker (CLI - Java)
 
-**FinTrack** is a Java-based command-line application for tracking personal income and expenses. It's built using standard Java, with JDBC for MySQL database operations. Developed in IntelliJ IDEA.
+**FinTrack** is a Java-based command-line application for tracking personal income and expenses. It's built using standard Java. Developed in IntelliJ IDEA.
 
 ---
 
@@ -8,9 +8,8 @@
 
 - Add and view income entries
 - Add and view expense entries
+- View Balance
 - Categorize expenses
-- Monthly report generation
-- Persistent storage using MySQL
 - Clean modular codebase (MVC structure)
 
 ---
@@ -42,9 +41,7 @@ FinTrack/
 ## 🛠️ Technologies Used
 
 - Java 17+
-- MySQL (JDBC)
 - IntelliJ IDEA
-- Maven (optional for future)
 - Console-based CLI UI
 
 ---
@@ -55,15 +52,7 @@ FinTrack/
 
 1. Clone or download this repository.
 2. Open the project in IntelliJ IDEA.
-3. Configure the MySQL JDBC connector if not already:
-   - File → Project Structure → Libraries → Add mysql-connector-j-x.x.x.jar
-4. Create a MySQL database:
-   ```sql
-   CREATE DATABASE fintrack_db;
-````
-
-5. Update your DB credentials in `DBUtil.java`.
-6. Run `Main.java` via right-click → Run 'Main.main()'.
+3. Run `Main.java` via right-click → Run 'Main.main()'.
 
 ### ☕ Run via Command Line
 
@@ -73,27 +62,6 @@ FinTrack/
    ```bash
    java -jar FinTrack.jar
    ```
-
----
-
-## 📝 Database Schema (MySQL)
-
-```sql
-CREATE TABLE income (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  source VARCHAR(100),
-  amount DECIMAL(10,2),
-  date DATE
-);
-
-CREATE TABLE expense (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  category VARCHAR(100),
-  amount DECIMAL(10,2),
-  date DATE,
-  description TEXT
-);
-```
 
 ---
 
@@ -107,7 +75,7 @@ CREATE TABLE expense (
 
 ## 📌 Author
 
-* **Mohit** – *Developer*
+* **Mohit Solanki** – *Developer*
 
 ---
 
